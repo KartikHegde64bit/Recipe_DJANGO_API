@@ -3,8 +3,9 @@ version: "3.9"
 services:
   app:
     build:
-      # this specifies the root as context
       context: .
+      args:
+        - DEV=true
     ports:
       - "8000:8000"
     volumes:
